@@ -11,7 +11,7 @@ pfServer.use(express.json()) // application specific middleware - invokes whenev
 pfServer.use(router)
 pfServer.use('/uploads',express.static('./uploads'))
 
-const PORT = 3000
+const PORT = 3000 || process.env.PORT
 
 pfServer.listen(PORT,()=>{
     console.log(`Server is now online at port : ${PORT}`);
